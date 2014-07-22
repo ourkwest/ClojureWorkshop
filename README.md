@@ -1,4 +1,4 @@
 ClojueWorkshop
 ==============
 
-A Workshop to get startup with Clojure.
+A Workshop to get started with Clojure.
