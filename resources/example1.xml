@@ -1,0 +1,36 @@
+<vehicles>
+    <vehicle type="tesla">
+        <colour>black</colour>
+        <colour>white</colour>
+        <colour>red</colour>
+    </vehicle>
+    <vehicle type="tvr">
+        <colour>orange</colour>
+    </vehicle>
+    <vehicle type="skoda">
+        <colour>greige</colour>
+        <colour>blue</colour>
+        <colour>black</colour>
+        <colour>white</colour>
+        <colour>brown</colour>
+        <colour>green</colour>
+        <colour>red</colour>
+    </vehicle>
+    <vehicle type="ford">
+        <colour>black</colour>
+    </vehicle>
+    <vehicle type="ferrari">
+        <colour>yellow</colour>
+    </vehicle>
+    <vehicle type="audi">
+        <colour>white</colour>
+    </vehicle>
+    <vehicle type="volvo">
+        <colour>red</colour>
+        <colour>beige</colour>
+        <colour>blue</colour>
+        <colour>black</colour>
+        <colour>brown</colour>
+        <colour>white</colour>
+    </vehicle>
+</vehicles>

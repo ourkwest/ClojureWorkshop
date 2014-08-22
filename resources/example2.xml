@@ -1,0 +1,15 @@
+<vehicles>
+  <vehicle type="lancia">
+    <colour>lime-green</colour>
+    <colour>red</colour>
+    <colour>white</colour>
+    <colour>blue</colour>
+    <colour>purple</colour>
+  </vehicle>
+  <vehicle type="unicorn">
+    <colour>rainbow</colour>
+  </vehicle>
+  <vehicle type="tank">
+    <colour>green</colour>
+  </vehicle>
+</vehicles>
