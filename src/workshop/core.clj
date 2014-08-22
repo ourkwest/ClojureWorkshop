@@ -14,7 +14,8 @@
 (def col-military [:green :greige :beige])
 (def col-magic [:rainbow])
 (def col-meh [:beige :greige :black :brown])
-(def col-norm [:red :green :blue :white])
+(def col-norm [:green :blue :grey])
+(def col-common [:red :black :white])
 (def col-strong [:lime-green :yellow :orange :purple])
 (def col-pearl [:pearlescent-turquiose :pearlescent-magenta])
 
@@ -41,7 +42,8 @@
     :lancia (concat col-norm col-strong)
     :audi [:white]
     :ford [:black]
-    v (concat col-meh col-norm)))
+    :tesla col-common
+    v (concat col-meh col-norm col-common)))
 
 (defn add-colours [v rnd]
   (let [cs (available-colours v)
