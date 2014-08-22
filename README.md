@@ -7,11 +7,11 @@
 A Workshop to get started with Clojure. We will perform some simple tasks to build familiarity with Clojure development.
 
 
-## Mildstones*
+## Mildstones
 
 * Mildstone 1: Read a file from a remote server.
-* Mildstone 2: Parse the data out of that file. 
-* Mildstone 3: Reformat that data as HTML. 
+* Mildstone 2: Parse the data out of that file.
+* Mildstone 3: Reformat that data as HTML.
 * Mildstone 4: Serve that HTML over HTTP.
 
 \* A "mildstone" is like a milestone but less intimidating.
@@ -19,14 +19,15 @@ A Workshop to get started with Clojure. We will perform some simple tasks to bui
 
 ## Pre-requisites
 
-0. Some basic computer science knowledge. This is aimed at people who already have some familiarity with at least one programming language. 
+0. Some basic computer science knowledge. This is aimed at people who already have some familiarity with at least one programming language.
 1. Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 2. Install [Leiningen](http://leiningen.org/)
 3. Either run `lein repl` at the command line to start an interactive Clojure prompt or setup an editor to develop with Clojure and then start a REPL from within your editor.
     1. IntelliJ: install 'La Clojure' plugin.
     2. Eclipse: install 'Counterclockwise' plugin.
-    3. Emacs: install 'Emacs Live'    
-> N.B. Other plugins/editors exist. This tutorial will assume that you are using `lein repl`. 
+    3. Emacs: install 'Emacs Live'
+
+> N.B. Other plugins/editors exist. This tutorial will assume that you are running `lein repl` at the command line.
 
 
 ## Mildstone 1
@@ -35,16 +36,16 @@ A Workshop to get started with Clojure. We will perform some simple tasks to bui
 
 To do this we'll need the address of the file, and a Clojure function to read files given their addresses.
 
-The file is located at <https://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml>. 
+The file is located at <https://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml>. (There are also example files 2 and 3 if you prefer.)
 As this is a bit unwieldy we can save this to a 'var' by calling `def` so that we can refer to it later more succinctly.
 
-Clojure functions can be called at the REPL by writing `(function-name arguments...)` in this case `(def file-url "http://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml")`  
+Clojure functions can be called at the REPL by writing `(function-name arguments...)` in this case `(def file-url "http://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml")`.
 
-Type this into your REPL and hit return. 
+Type (or copy + paste) this into your REPL and hit return.
 You have now defined a mapping in your namespace between the name 'file-url' and a String representing the file URL.
 
 The simplest Clojure function to read a file from a URL is called `slurp`.
-You can now call this as follows: `(slurp file-url)` 
+You can now call this as follows: `(slurp file-url)`
 This will fetch the file's contents from the given URL and display them to you.
 
 To make this more readable you can wrap the call to `slurp` in a call to `println` thus: `(println (slurp file-url))`
@@ -53,6 +54,25 @@ To make this more readable you can wrap the call to `slurp` in a call to `printl
 
 
 ## Mildstone 2
+
+> Parse the data out of that file.
+
+The more observant amongst you may already have noticed that the data in the example files are in XML form.
+While XML is a reasonably transparent format we still need to parse the raw text into more manageable data structures so that we can manipulate it more easily.
+
+Luckily there is a Clojure function for parsing XML in the `clojure.xml` namespace called `parse` that does exactly this.
+To make functions from another namespace available you can call the `use` function with the quoted name of the namespace as follows: `(use 'clojure.xml)`.
+You can then call `parse` as if it were a function in your namespace. In our example it can be used as a drop-in replacement for `slurp`.
+
+If in doubt about how to use a function you can try calling `doc` on it, e.g. `(doc parse)`.
+
+If you call `parse` on the `file-url` you should see a representation of the data that is in the XML file.
+The format of this data may look unfamiliar, but as we shall see we can manipulate it with ease.
+
+> Congratulations! (Assuming that worked?) You successfully fetched and parsed a remote file into native Clojure data structures.
+
+
+## Mildstone 3
 
 
 2.	Know about Leiningen:
