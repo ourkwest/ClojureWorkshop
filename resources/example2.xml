@@ -1,15 +1,41 @@
 <vehicles>
-  <vehicle type="lancia">
-    <colour>lime-green</colour>
-    <colour>red</colour>
-    <colour>white</colour>
-    <colour>blue</colour>
-    <colour>purple</colour>
-  </vehicle>
-  <vehicle type="unicorn">
-    <colour>rainbow</colour>
-  </vehicle>
-  <vehicle type="tank">
-    <colour>green</colour>
-  </vehicle>
+    <vehicle type="tesla">
+        <colour>black</colour>
+        <colour>white</colour>
+        <colour>red</colour>
+    </vehicle>
+    <vehicle type="tvr">
+        <colour>orange</colour>
+        <colour>yellow</colour>
+        <colour>pearlescent-magenta</colour>
+        <colour>lime-green</colour>
+        <colour>pearlescent-turquiose</colour>
+        <colour>orange</colour>
+    </vehicle>
+    <vehicle type="skoda">
+        <colour>greige</colour>
+        <colour>blue</colour>
+        <colour>black</colour>
+        <colour>white</colour>
+        <colour>brown</colour>
+        <colour>green</colour>
+        <colour>red</colour>
+    </vehicle>
+    <vehicle type="ford">
+        <colour>black</colour>
+    </vehicle>
+    <vehicle type="ferrari">
+        <colour>yellow</colour>
+    </vehicle>
+    <vehicle type="audi">
+        <colour>white</colour>
+    </vehicle>
+    <vehicle type="volvo">
+        <colour>red</colour>
+        <colour>beige</colour>
+        <colour>blue</colour>
+        <colour>black</colour>
+        <colour>brown</colour>
+        <colour>white</colour>
+    </vehicle>
 </vehicles>
