@@ -2,14 +2,12 @@
 *** Work In Progress ***
 ========================
 
-ClojureWorkshop
-==============
+# ClojureWorkshop
 
 A Workshop to get started with Clojure.
 
 
-Mildstones*
------------
+## Mildstones*
 
 * Mildstone 1: Read a file from a remote server.
 * Mildstone 2: Parse the data out of that file. 
@@ -19,17 +17,33 @@ Mildstones*
 \* A "mildstone" is like a milestone but less intimidating.
 
 
-How to achieve them
--------------------
+## Pre-requisites
 
-0.	Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-1.	Install [Leiningen](http://leiningen.org/)
+0. Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+1. Install [Leiningen](http://leiningen.org/)
+2. Either run `lein repl` at the command line to start an interactive Clojure prompt or setup an editor to develop with Clojure and then start a REPL from within your editor.
+    1. IntelliJ: install 'La Clojure' plugin.
+    2. Eclipse: install 'Counterclockwise' plugin.
+    3. Emacs: install 'Emacs Live'
+    > N.B. Other plugins/editors exist. This tutorial will assume that you are using `lein repl`. 
+
+## Mildstone 1
+
+> Aim: Read a file from a remote server.
+
+To do this we'll need the address of the file, and a Clojure function to read files given their addresses.
+
+The file is located at <http://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml>.
+The simplest Clojure function to read a file from a URL is called `slurp`.
+Clojure functions can be called at the REPL by writing `(function-name arguments...)` in this case `(slurp "http://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml")` 
+
+
 2.	Know about Leiningen:
 	1.	Know how to create a leiningen project “lein new <project_name>”
-	2.	Know how to add dependencies to a leiningen project [TODO…]
+	2.	Know how to add dependencies to a leiningen project [Leiningen Tutorial: Dependencies](https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md#dependencies)
 	3.	Know how to start a leiningen repl “lein repl”
 3.	Know where the file is located:
-	a.	Ask me
+	1.	[example1.xml](https://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml)
 4.	Know some useful Clojure libraries:
 	a.	Hiccup can be used as an HTML tempting library
 	b.	Ring can be used as a web server
