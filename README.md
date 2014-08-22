@@ -22,7 +22,7 @@ Mildstones*
 How to achieve them
 -------------------
 
-0.	Install Java
+0.	Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1.	Install [Leiningen](http://leiningen.org/)
 2.	Know about Leiningen:
 	a.	Know how to create a leiningen project “lein new <project_name>”
