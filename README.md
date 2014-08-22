@@ -25,9 +25,9 @@ How to achieve them
 0.	Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1.	Install [Leiningen](http://leiningen.org/)
 2.	Know about Leiningen:
-	a.	Know how to create a leiningen project “lein new <project_name>”
-	b.	Know how to add dependencies to a leiningen project [TODO…]
-	c.	Know how to start a leiningen repl “lein repl”
+	1.	Know how to create a leiningen project “lein new <project_name>”
+	2.	Know how to add dependencies to a leiningen project [TODO…]
+	3.	Know how to start a leiningen repl “lein repl”
 3.	Know where the file is located:
 	a.	Ask me
 4.	Know some useful Clojure libraries:
