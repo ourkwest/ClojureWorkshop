@@ -2,9 +2,9 @@
 *** Work In Progress ***
 ========================
 
-# ClojureWorkshop
+# Clojure Workshop
 
-A Workshop to get started with Clojure.
+A Workshop to get started with Clojure. We will perform some simple tasks to build familiarity with Clojure development.
 
 
 ## Mildstones*
@@ -19,13 +19,15 @@ A Workshop to get started with Clojure.
 
 ## Pre-requisites
 
-0. Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-1. Install [Leiningen](http://leiningen.org/)
-2. Either run `lein repl` at the command line to start an interactive Clojure prompt or setup an editor to develop with Clojure and then start a REPL from within your editor.
+0. Some basic computer science knowledge. This is aimed at people who already have some familiarity with at least one programming language. 
+1. Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+2. Install [Leiningen](http://leiningen.org/)
+3. Either run `lein repl` at the command line to start an interactive Clojure prompt or setup an editor to develop with Clojure and then start a REPL from within your editor.
     1. IntelliJ: install 'La Clojure' plugin.
     2. Eclipse: install 'Counterclockwise' plugin.
-    3. Emacs: install 'Emacs Live'
-    > N.B. Other plugins/editors exist. This tutorial will assume that you are using `lein repl`. 
+    3. Emacs: install 'Emacs Live'    
+> N.B. Other plugins/editors exist. This tutorial will assume that you are using `lein repl`. 
+
 
 ## Mildstone 1
 
@@ -33,17 +35,31 @@ A Workshop to get started with Clojure.
 
 To do this we'll need the address of the file, and a Clojure function to read files given their addresses.
 
-The file is located at <http://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml>.
+The file is located at <https://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml>. 
+As this is a bit unwieldy we can save this to a 'var' by calling `def` so that we can refer to it later more succinctly.
+
+Clojure functions can be called at the REPL by writing `(function-name arguments...)` in this case `(def file-url "http://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml")`  
+
+Type this into your REPL and hit return. 
+You have now defined a mapping in your namespace between the name 'file-url' and a String representing the file URL.
+
 The simplest Clojure function to read a file from a URL is called `slurp`.
-Clojure functions can be called at the REPL by writing `(function-name arguments...)` in this case `(slurp "http://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml")` 
+You can now call this as follows: `(slurp file-url)` 
+This will fetch the file's contents from the given URL and display them to you.
+
+To make this more readable you can wrap the call to `slurp` in a call to `println` thus: `(println (slurp file-url))`
+
+> Congratulations! (Assuming that worked?) You successfully fetched a remote file and have completed the first Mildstone.
+
+
+## Mildstone 2
 
 
 2.	Know about Leiningen:
 	1.	Know how to create a leiningen project “lein new <project_name>”
 	2.	Know how to add dependencies to a leiningen project [Leiningen Tutorial: Dependencies](https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md#dependencies)
 	3.	Know how to start a leiningen repl “lein repl”
-3.	Know where the file is located:
-	1.	[example1.xml](https://raw.githubusercontent.com/peterwestmacott/ClojureWorkshop/master/resources/example1.xml)
+
 4.	Know some useful Clojure libraries:
 	a.	Hiccup can be used as an HTML tempting library
 	b.	Ring can be used as a web server
