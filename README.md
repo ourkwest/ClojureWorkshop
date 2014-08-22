@@ -100,16 +100,26 @@ This means that `vehicles` refers to a vector, which is a kind of sequence.
 
 ### Working with sequences
 
+#### first and rest
+
 The two most basic operations that you can perform with a sequence are `first` and `rest`.
 Try calling these functions on `vehicles` to see what they do. Alternatively try calling `doc` on `first` and `rest`.
 
-Another powerful technique is to call `map` on a sequence.
+#### map
+
+One particularly powerful technique for working with sequences is to call `map`.
 If you call `doc` on `map` you may come to understand that `map` takes another function as its first argument followed by any number of sequences.
 When executed `map` will pull items from the given sequences and use them as arguments to a series of calls to the given function.
 
-For example, let's say we called `(map :tag vehicles)`, this would return the result of calling `:tag` on each element in the `vehicles` sequence.
-In other words, this gives us the tag-name of every element that was in the root element of the XML document. We could also use `map` with `:content`.
+For example, let's say we called `(map :tag vehicles)`, this would return a sequence contain the results of calling `:tag` on each element in the `vehicles` sequence.
+In other words, this gives us a sequence containing the tag-name of every element that was in the root element of the XML document. 
+We could also use `map` with `:content` to get the content of those child tags instead of their tag-names.
 
+#### for
+
+Another way to work with sequences is to call `for`.
+
+A call to `for` looks like this: `(for [x some-sequence] (some-function x))`, which would give us the result of calling some-function on every element in some-sequence.
 
 
 
